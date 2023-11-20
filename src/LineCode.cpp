@@ -43,8 +43,9 @@ m = (y2 — y1) / (x2 — x1). В нашем случае: m = (7 — 3) / (5 �
 Уравнение не выполняется, значит, точка C не лежит на луче AB.
 */
 
-bool inLine(Line line, Point point) {           // проверка точки на принадлежность отрезку Line
-	bool test = (point.Y == (line.aParam * point.X - line.bParam));
+bool inLine(Line line, Point point) {           // проверка точки на принадлежность отрезку Line	
+	double tmpY = line.aParam * point.X + line.bParam;
+	bool test = (point.Y == (tmpY));
 	return test;
 }
 
